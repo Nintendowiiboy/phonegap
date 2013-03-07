@@ -6,51 +6,81 @@
   <meta name = "viewport" content = "initial-scale = 1.0, user-scalable=no">
  </head>
  <body>
-  <h1>Handling Household Waste</h1>
-  <select id="choice" onchange="selectedChanged()" backcolor="black" color="white">
-   <option>Choose...</option>
-   <option>Newspaper</option>
-   <option>Cardboard</option>
-   <option>Other Paper</option>
-   <option>Cleaners Using Ammonia</option>
-   <option>Bleach Cleaners</option>
-   <option>Disinfectants</option>
-   <option>Drain Cleaners</option>
-   <option>Polishes</option>
-   <option>Metal Cleaners & Polishes</option>
-   <option>Oven Cleaners</option>
-   <option>Rug Cleaners</option>
-   <option>Toilet Bowl Cleaners</option>
-   <option>Grease/Rust Solvents</option>
-   <option>Air Fresheners</option>
-   <option>Glues/Adhesives</option>
-   <option>Mothballs</option>
-   <option>Photographic Chemicals</option>
-   <option>Stains/Finishers/Wood Preservatives</option>
-   <option>Pool Chemicals</option>
-   <option>Thinners/Turpentine</option>
-   <option>Used Motor Oil</option>
-   <option>Used Antifreeze</option>
-   <option>Used Batteries</option>
-   <option>Old Tires</option>
-   <option>Automotive Brake Fluid</option>
-   <option>Automotive Transmission Fluid</option>
-   <option>Windshield Wiper Fluid</option>
-   <option>Gasoline/Diesel</option>
-   <option>Car Wax</option>
-   <option>Spent Lightbulbs</option>
-   <option>Pesticides/Herbicides/Fertilizers</option>
-   <option>Abrasive Household Cleaners</option>
-   <option>Aerosol Cans</option>
-   <option>Oil Based Paint</option>
-   <option>Empty Paint Cans</option>
-   <option>Aluminum Cans</option>
-   <option>Plastic or Glass Bottles</option>
-   <option>Plastic Bags</option>
-  </select><br/>
-  <h3>Waste Handling Methods:</h3>
-  <div id="text">Please select a choice from above!</div>
-  <h3>Friendly Alternatives:</h3>
-  <div id="text2">Please select a choice from above!</div>
+  <div id="main">
+   <h1>Handling Household Waste</h1>
+   <select id="choice" onchange="selectedChanged()" backcolor="black" color="white">
+    <option>Choose...</option>
+    <option>Abrasive Household Cleaners</option>
+    <option>Aerosol Cans</option>
+    <option>Air Fresheners</option>
+    <option>Aluminum Cans</option>
+    <option>Automotive Brake Fluid</option>
+    <option>Automotive Transmission Fluid</option>
+    <option>Bleach Cleaners</option>
+    <option>Car Wax</option>
+    <option>Cardboard</option>
+    <option>Cleaners Using Ammonia</option>
+    <option>Disinfectants</option>
+    <option>Drain Cleaners</option>
+    <option>Electronics</option>
+    <option>Empty Paint Cans</option>
+    <option>Gasoline/Diesel</option>
+    <option>Glues/Adhesives</option>
+    <option>Grease/Rust Solvents</option>
+    <option>Ink and toner cartridges</option>
+    <option>Metal Cleaners & Polishes</option>
+    <option>Mothballs</option>
+    <option>Newspaper</option>
+    <option>Oil Based Paint</option>
+    <option>Old Tires</option>
+    <option>Other Paper</option>
+    <option>Oven Cleaners</option>
+    <option>Pesticides/Herbicides/Fertilizers</option>
+    <option>Photographic Chemicals</option>
+    <option>Plastic Bags</option>
+    <option>Plastic or Glass Bottles</option>
+    <option>Polishes</option>
+    <option>Pool Chemicals</option>
+    <option>Rug Cleaners</option>
+    <option>Spent Lightbulbs</option>
+    <option>Stains/Finishers/Wood Preservatives</option>
+    <option>Thinners/Turpentine</option>
+    <option>Toilet Bowl Cleaners</option>
+    <option>Used Antifreeze</option>
+    <option>Used Batteries</option>
+    <option>Used Motor Oil</option>
+    <option>Windshield Wiper Fluid</option>
+   </select><br/>
+   <h3>Waste Handling Methods:</h3>
+   <div id="text">Please select a choice from above!</div>
+   <h3>Friendly Alternatives:</h3>
+   <div id="text2">Please select a choice from above!</div><br/>
+   <button onclick="goToHelp()">Help</button>
+   <button onclick="goToAbout()">About</button>
+  </div>
+  <div id="help">
+   Navigating the app is very simple. Simply follow the steps below.
+   <br/><br/>
+   <ol>
+    <li>Click the dropdown list on the main page.</li>
+    <li>Find the item you want to learn more about.</li>
+    <li>Click that item.</li>
+    <li>Read the text filled in by your choice.</li>
+    <li>One last thing,... enjoy the app!</li>
+   </ol><br/>
+   <button onclick="backToMain()">Back</button>
+  </div>
+  <div id="about">
+   <h1>Newton Games Inc.</h1>
+   Newton games inc. was created by James J. Newton and Robert E. Newton.
+   <br/><br/>
+   Handling Household Waste was an idea that Jim (James) had. He originally
+   got the idea from a slide-out pamphlet that he recieved. The app 
+   was then created by Robert Newton and released on the Android market.
+   Made with PhoneGap, this was Robert's first app on the app store.
+   To learn more about the company and apps/games created by NGI, please
+   visit their website http://www.newtongamesinc.com/. I hope you enjoy this free app.
+   <br/><br/><button onclick="backToMain()">Back</button>
+  </div>
  </body>
 </html>

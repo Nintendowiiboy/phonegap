@@ -9,3 +9,11 @@ button{
  font-weight:bold;
  font-size:20pt;
 }
+
+#about{
+ display:none;
+}
+
+#help{
+ display:none;
+}

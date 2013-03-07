@@ -13,6 +13,16 @@ function selectedChanged(){
    document.getElementById("text2").innerHTML = "Please select a choice from above!";
   break;
 
+  case "Electronics":
+   document.getElementById("text").innerHTML = "Place electronic(s) in recycle bins, or donate to a charity.";
+   document.getElementById("text2").innerHTML = "Use refurbished electornics.";
+  break;
+
+  case "Ink and toner cartridges":
+   document.getElementById("text").innerHTML = "Place household trash in plastic or recycle.";
+   document.getElementById("text2").innerHTML = "Use remanufacutred cartridges.";
+  break;
+
   case "Newspaper":
    document.getElementById("text").innerHTML = "Recycle either through a charity or county organization.";
    document.getElementById("text2").innerHTML = "Buy recycled paper.";
@@ -212,4 +222,20 @@ function backClick(){
 
 function refresh(){
  document.location.reload();
+}
+
+function goToAbout(){
+ document.getElementById("main").style.display = "none";
+ document.getElementById("about").style.display = "inline";
+}
+
+function goToHelp(){
+ document.getElementById("main").style.display = "none";
+ document.getElementById("help").style.display = "inline";
+}
+
+function backToMain(){
+ document.getElementById("help").style.display = "none";
+ document.getElementById("about").style.display = "none";
+ document.getElementById("main").style.display = "inline";
 }
