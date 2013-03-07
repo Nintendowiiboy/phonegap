@@ -18,8 +18,13 @@ function selectedChanged(){
    document.getElementById("text2").innerHTML = "Use refurbished electornics.";
   break;
 
+  case "Pharmeceuticals":
+   document.getElementById("text").innerHTML = "Use completely up, then wrap containers in plastic and place in the trash.  Hold for collection days if possible.  Do not pour down sink or into toilet.";
+   document.getElementById("text2").innerHTML = "Use natural organic options, if available, after consulting your doctor.";
+  break;
+
   case "Ink and toner cartridges":
-   document.getElementById("text").innerHTML = "Place household trash in plastic or recycle.";
+   document.getElementById("text").innerHTML = "Wrap in plastic and place in trash or sned it out to be recycled.";
    document.getElementById("text2").innerHTML = "Use remanufacutred cartridges.";
   break;
 
