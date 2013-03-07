@@ -21,6 +21,10 @@
 
     <icon src="images/icon.png" />
 
+    <preference name="splash-screen-duration" value="10000" />
+    
+    <preference name="permissions" value="none"/>
+
     <gap:splash src="images/logo.png"  gap:platform="android" gap:density="ldpi" />
     <gap:splash src="images/logo.png"         gap:platform="blackberry" />
     <gap:splash src="images/logo.png"    gap:platform="ios"     width="320" height="480" />
