@@ -226,6 +226,9 @@ function refresh(){
 }
 
 function goTo(a){
+ var e = document.getElementById("typeOfSearch");
+ var s = e.options[e.selectedIndex].value;
+
  document.getElementById("main").style.display = "none";
  document.getElementById("help").style.display = "none";
  document.getElementById("about").style.display = "none";
@@ -234,6 +237,16 @@ function goTo(a){
   document.getElementById(a).style.display = "inline";
  }else{
   var z = document.getElementById("zip").value;
-  document.location = "http://maps.google.com/maps?q=" + z + "+Recycling+Yards";
+  document.location = "http://maps.google.com/maps?q=" + z + " " + s;
  }
 }
+
+function aquireGPS(){
+ var e = document.getElementById("typeOfSearch");
+ var s = e.options[e.selectedIndex].value;
+
+ navigator.geolocation.getCurrentPosition(function (p){
+  document.location = "http://maps.google.com/maps?q=" + s + " " + p.coords.latitude + ", " + p.coords.longitude;
+ });
+}
+
