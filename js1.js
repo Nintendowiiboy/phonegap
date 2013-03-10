@@ -246,7 +246,7 @@ function aquireGPS(){
  var s = e.options[e.selectedIndex].value;
 
  navigator.geolocation.getCurrentPosition(function (p){
-  document.location = "http://maps.google.com/maps?q=" + s + " " + p.coords.latitude + ", " + p.coords.longitude;
+  document.location = "http://maps.google.com/maps?q=<lat>" + p.coords.latitude + ",<long>" + p.coords.longitude + " " + s;
  });
 }
 
