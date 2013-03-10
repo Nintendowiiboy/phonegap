@@ -56,8 +56,9 @@
    <div id="text">Please select a choice from above!</div>
    <h3>Friendly Alternatives:</h3>
    <div id="text2">Please select a choice from above!</div><br/>
-   <button onclick="goToHelp()">Help</button>
-   <button onclick="goToAbout()">About</button>
+   <button onclick="goTo('zipdiv')">Recycling Yards</button><br/><br/>
+   <button onclick="goTo('help')">Help</button><br/><br/>
+   <button onclick="goTo('about')">About</button>
   </div>
   <div id="help">
    Navigating the app is very simple. Simply follow the steps below.
@@ -69,7 +70,7 @@
     <li>Read the text filled in by your choice.</li>
     <li>One last thing,... enjoy the app!</li>
    </ol><br/>
-   <button onclick="backToMain()">Back</button>
+   <button onclick="goTo('main')">Back</button>
   </div>
   <div id="about">
    <h1>Newton Games Inc.</h1>
@@ -81,7 +82,11 @@
    Made with PhoneGap, this was Robert's first app on the app store.
    To learn more about the company and apps/games created by NGI, please
    visit their website <br/>http://www.newtongamesinc.com/<br/> I hope you enjoy this free app.
-   <br/><br/><button onclick="backToMain()">Back</button>
+   <br/><br/><button onclick="goTo('main')">Back</button>
+  </div>
+  <div id="zipdiv">
+   Zipcode: <input type="text" id="zip"/> <button onclick="goTo('maps')">Go!</button>
+   <br/><br/><button onclick="goTo('main')">Back</button>
   </div>
   <br/><br/><div id="footer">Copyright 2012 (C) Newton Games Inc.<br/>Created by Robert Newton</div>
  </body>

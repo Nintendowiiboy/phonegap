@@ -221,26 +221,19 @@ function selectedChanged(){
  }
 }
 
-function backClick(){
- document.location.href="index.html";
-}
-
 function refresh(){
  document.location.reload();
 }
 
-function goToAbout(){
+function goTo(a){
  document.getElementById("main").style.display = "none";
- document.getElementById("about").style.display = "inline";
-}
-
-function goToHelp(){
- document.getElementById("main").style.display = "none";
- document.getElementById("help").style.display = "inline";
-}
-
-function backToMain(){
  document.getElementById("help").style.display = "none";
  document.getElementById("about").style.display = "none";
- document.getElementById("main").style.display = "inline";
+ document.getElementById("zipdiv").style.display = "none";
+ if (a != "maps"){
+  document.getElementById(a).style.display = "inline";
+ }else{
+  var z = document.getElementById("zip").value;
+  document.location = "http://maps.google.com/maps?q=" + z + "+Recycling+Yards";
+ }
 }
