@@ -233,9 +233,9 @@ function goTo(a){
  document.getElementById("help").style.display = "none";
  document.getElementById("about").style.display = "none";
  document.getElementById("zipdiv").style.display = "none";
- if (a != "maps"){
+ if (a != "maps" && s != "Choose One"){
   document.getElementById(a).style.display = "inline";
- }else{
+ }else if (s != "Choose One"){
   var z = document.getElementById("zip").value;
   document.location = "http://maps.google.com/maps?q=" + z + " " + s;
  }
@@ -245,8 +245,10 @@ function aquireGPS(){
  var e = document.getElementById("typeOfSearch");
  var s = e.options[e.selectedIndex].value;
 
- navigator.geolocation.getCurrentPosition(function (p){
-  document.location = "http://maps.google.com/maps?q=<lat>" + p.coords.latitude + ",<long>" + p.coords.longitude + " " + s;
- });
+ if (s != "Choose One"){
+  navigator.geolocation.getCurrentPosition(function (p){
+   document.location = "http://maps.google.com/maps?q=<lat>" + p.coords.latitude + ",<long>" + p.coords.longitude + " " + s;
+  });
+ }
 }
 
