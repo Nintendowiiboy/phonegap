@@ -242,11 +242,11 @@ function aquire(m){
  if (s != "Choose One"){
   if (m != "ZIP"){
    navigator.geolocation.getCurrentPosition(function (p){
-    document.location = "http://maps.google.com/maps?q=<lat>" + p.coords.latitude + ",<long>" + p.coords.longitude + " " + s;
+    document.location = "http://maps.google.com/maps?q=" + s + " near " + p.coords.latitude + ", " + p.coords.longitude;
    });
   }else{
    var z = document.getElementById("zip").value;
-   document.location = "http://maps.google.com/maps?q=" + z + " " + s;
+   document.location = "http://maps.google.com/maps?q=" + s + " near " + z;
   }
  }
  else{
