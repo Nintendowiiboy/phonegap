@@ -23,7 +23,8 @@
 
     <preference name="splash-screen-duration" value="2000" />
     
-    <feature name="http://api.phonegap.com/1.0/geolocation"/>
+    <preference name="permissions" value="none"/>
+    <!-- <feature name="http://api.phonegap.com/1.0/geolocation"/> -->
 
     <gap:splash src="images/logo.png"  gap:platform="android" gap:density="ldpi" />
     <gap:splash src="images/logo.png"         gap:platform="blackberry" />
