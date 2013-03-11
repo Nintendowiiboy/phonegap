@@ -226,29 +226,31 @@ function refresh(){
 }
 
 function goTo(a){
- var e = document.getElementById("typeOfSearch");
- var s = e.options[e.selectedIndex].value;
-
  document.getElementById("main").style.display = "none";
  document.getElementById("help").style.display = "none";
  document.getElementById("about").style.display = "none";
  document.getElementById("zipdiv").style.display = "none";
- if (a != "maps" && s != "Choose One"){
-  document.getElementById(a).style.display = "inline";
- }else if (s != "Choose One"){
-  var z = document.getElementById("zip").value;
-  document.location = "http://maps.google.com/maps?q=" + z + " " + s;
- }
+ document.getElementById("choose").innerHTML = "";
+ document.getElementById("zip").value = "";
+ document.getElementById(a).style.display = "inline";
 }
 
-function aquireGPS(){
+function aquire(m){
  var e = document.getElementById("typeOfSearch");
  var s = e.options[e.selectedIndex].value;
 
  if (s != "Choose One"){
-  navigator.geolocation.getCurrentPosition(function (p){
-   document.location = "http://maps.google.com/maps?q=<lat>" + p.coords.latitude + ",<long>" + p.coords.longitude + " " + s;
-  });
+  if (m != "ZIP"){
+   navigator.geolocation.getCurrentPosition(function (p){
+    document.location = "http://maps.google.com/maps?q=<lat>" + p.coords.latitude + ",<long>" + p.coords.longitude + " " + s;
+   });
+  }else{
+   var z = document.getElementById("zip").value;
+   document.location = "http://maps.google.com/maps?q=" + z + " " + s;
+  }
+ }
+ else{
+  document.getElementById("choose").innerHTML = "Must choose one.";
  }
 }
 

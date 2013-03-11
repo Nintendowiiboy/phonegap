@@ -95,18 +95,15 @@
   </div>
   <div id="zipdiv">
    Select one below.<br/><br/>
-   <select id="typeOfSearch">
+   *<select id="typeOfSearch">
     <option>Choose One</option>
     <option>Hospital</option>
     <option>Junk Yard</option>
     <option>Recycle Areas</option>
-   </select><br/><br/>Now search by:<br/><br/>
-   Zipcode: <input type="text" id="zip"/> <button onclick="goTo('maps')">Go!</button>
-   <br/><br/>OR <br/><br/><button onclick="aquireGPS()">By GPS</button><br/><br/>
+   </select><br/><div id="choose"></div><br/><br/>Now search by:<br/><br/>
+   Zipcode: <input type="text" id="zip"/> <button onclick="aquire('ZIP')">Go!</button>
+   <br/><br/>OR <br/><br/><button onclick="aquire('GPS')">By GPS</button><br/><br/>
    <button onclick="goTo('main')">Back</button>
-  </div>
-  <div id="maps">
-   <iframe id="ifram"></iframe>
   </div>
   <br/><br/><div id="footer">Copyright 2012 (C) Newton Games Inc.<br/>Created by Robert Newton</div>
  </body>
